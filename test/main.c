@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 13:28:46 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 22:15:07 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/19 19:50:01 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,15 @@
 
 int main(void)
 {
-	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
-	char buff1[0xF00] = "there is no stars in the sky";
-	char buff2[0xF00] = "there is no stars in the sky";
-	size_t max = 0;
-
-	strlcat (buff1, str, max);
-	printf("%s\n", buff1);
-	ft_strlcat(buff2, str, max);
-
-	if (!strcmp(buff1, buff2))
-		printf("Success\n");
-	else
+	char *s1 = "\200";
+	char *s2 = "\0";
+	int i1 = ((strncmp(s1, s2, 1) > 0) ? 1 : ((strncmp(s1, s2, 1) < 0) ? -1 : 0));
+	int i2 = ((ft_strncmp(s1, s2, 1) > 0) ? 1 : ((ft_strncmp(s1, s2, 1) < 0) ? -1 : 0));
+	printf("%d, %d\n", i1, i2);
+	if (i1 != i2)
 		printf("Fail\n");
+	else
+		printf("Success\n");
 }
 
 
