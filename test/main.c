@@ -20,6 +20,51 @@
 
 // int main(void)
 // {
+// 	// char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+// 	// char buff1[0xF00] = "there is no stars in the sky";
+// 	// char buff2[0xF00] = "there is no stars in the sky";
+// 	// size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+// 	// size_t r1 = strlcat (buff1, str, max);
+// 	// size_t r2 = ft_strlcat(buff2, str, max);
+// 	size_t r1;
+// 	size_t r2;
+// 	// if (r1 != r2)
+// 	// 	printf("Fail 1\n");
+// 	// else
+// 	// 	printf("Success\n");
+// 	char s1[5] = "";
+// 	char s2[5] = "";
+// 	r1 = 	strlcat(s1, "hello to ntoniolo for this test !", 5);
+// 	r2 = ft_strlcat(s2, "hello to ntoniolo for this test !", 5);
+// 	printf("%zu =? %zu\n", r1, r2);
+// 	printf("OG :=> %s\n", s1);
+// 	printf("FT :=> %s\n", s2);
+// 	if (r1 != r2)
+// 		printf("Fail 2\n");
+// 	else
+// 		printf("Success\n");
+// }
+
+int main(void)
+{
+	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+	char buff1[0xF00] = "there is no stars in the sky";
+	char buff2[0xF00] = "there is no stars in the sky";
+	size_t max = 0;
+
+	strlcat (buff1, str, max);
+	printf("%s\n", buff1);
+	ft_strlcat(buff2, str, max);
+
+	if (!strcmp(buff1, buff2))
+		printf("Success\n");
+	else
+		printf("Fail\n");
+}
+
+
+// int main(void)
+// {
 
 // 	// ft_putnbr_fd(-((1<<31) - 1), 1);
 // 	printf("%d\n", atoi("-9999999999999999999"));
@@ -65,36 +110,16 @@
 //    return 0;
 // }
 
-int main(void)
-{
-	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
-	char buff1[0xF00] = "there is no stars in the sky";
-	char buff2[0xF00] = "there is no stars in the sky";
-	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
-	size_t r1 = strlcat (buff1, str, max);
-	size_t r2 = ft_strlcat(buff2, str, max);
 
-	printf("%zu =? %zu\n", r1, r2);
-	printf("%s\n", buff1);
-	printf("%s\n", buff2);
-
-
-	if (r1 != r2)
-		printf("Fail 1\n");
-	else
-		printf("Success\n");
-
-	char s1[4] = "";
-	char s2[4] = "";
-	r1 = strlcat (s1, "thx to ntoniolo for this test !", 4);
-	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
-	if (r1 != r2)
-		printf("Fail 2\n");
-	else
-		printf("Success\n");
+// char s1[4] = "";
+	// char s2[4] = "";
+	// r1 = strlcat (s1, "thx to ntoniolo for this test !", 4);
+	// r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
+	// if (r1 != r2)
+	// 	printf("Fail 2\n");
+	// else
+	// 	printf("Success\n");
 	// if (!strcmp(buff1, buff2))
 	// 	printf("Success\n");
 	// printf("Fail\n");
-}
-
 

@@ -14,15 +14,22 @@
 #include <stdio.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
+size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
-	const char *restrict *s;
+	size_t src_len;
+	size_t dest_len;
 
-	s = src;
-	while (*src && size--)
-		*dst++ = *src++;
-	if (*dst && size)
-		while (*dst)
-			*dst++ = '\0';
-	return ((int)((src - s)));
+	dest_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (size)
+	{
+		if (dest_len + src_len > size)
+		{
+			if (src_len > size)
+				ft_memcpy(dst + dest_len, src, size - 1);
+			return (src_len > size ? src_len : src_len + size);
+		}
+		ft_memcpy(dst + dest_len, src, src_len + (dest_len + src_len == size ? -1 : 1));
+	}
+	return (dest_len + src_len);
 }
