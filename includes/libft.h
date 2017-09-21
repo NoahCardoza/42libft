@@ -6,11 +6,13 @@
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 13:21:07 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/19 19:38:23 by noahcardoza      ###   ########.fr       */
+/*   Updated: 2017/09/21 12:07:40 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <strings.h>
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
@@ -42,6 +44,23 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
+
 int		ft_atoi(const char *str);
 int		ft_strlen(const char *s);
 int		ft_isdigit(int c);
@@ -55,3 +74,8 @@ int		ft_tolower(int c);
 int		ft_isspace(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
+
+char	*ft_strnext(char const *s, char c);
+int		ft_strwalk(char const **s, char c);
+
+# endif

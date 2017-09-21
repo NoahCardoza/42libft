@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:36:57 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/20 21:51:16 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/19 20:03:50 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/20 18:54:01 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <strings.h>
 #include "libft.h"
 
-void ft_putstr(char const *s)
+
+char	*ft_strnew(size_t size)
 {
-	ft_putstr_fd(s, 1);
+	return ((char*)ft_memalloc(size + 1));
 }

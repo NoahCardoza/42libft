@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:36:57 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/20 21:51:16 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/19 19:56:10 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/19 20:01:02 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h"
+#include <stdlib.h>
 
-void ft_putstr(char const *s)
+void *ft_memalloc(size_t size)
 {
-	ft_putstr_fd(s, 1);
+	unsigned char *ptr;
+
+	if ((ptr = malloc(size)))
+	{
+		while (size)
+			ptr[size--] = 0;
+		ptr[size] = 0;
+		return ((void*)(ptr));
+	}
+	return (NULL);
 }

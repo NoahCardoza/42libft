@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strwalk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:36:57 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/20 21:51:16 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/20 18:14:24 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/20 18:16:19 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h"
+/*
+** Transverses a char array while the current char equals 
+** c. It returns 0 or 1 if it makes it to the end of the
+** array.
+*/
 
-void ft_putstr(char const *s)
+int		ft_strwalk(char const **s, char c)
 {
-	ft_putstr_fd(s, 1);
+	while (c == **s)
+		(*s)++;
+	return (!!**s);
 }

@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:36:57 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/20 21:51:16 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/20 14:18:43 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/20 21:45:04 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void ft_putstr(char const *s)
-{
-	ft_putstr_fd(s, 1);
+int		ft_strequ(char const *s1, char const *s2)
+{	
+	if (!s1 || !s2)
+		return (0);
+	return (!ft_strcmp(s1, s2));
 }

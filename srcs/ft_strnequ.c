@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:36:57 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/20 21:51:16 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/20 14:21:49 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/20 21:45:05 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <strings.h>
 
-void ft_putstr(char const *s)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	ft_putstr_fd(s, 1);
+	if (!s1 || !s2)
+		return (0);
+	return (!ft_strncmp(s1, s2, n));
 }

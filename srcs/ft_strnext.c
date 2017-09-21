@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnext.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:36:57 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/20 21:51:16 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/20 18:12:15 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/20 18:16:20 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h"
+/*
+** Similar to ft_strchr but returns the end of the
+** string when no char is found.
+*/
 
-void ft_putstr(char const *s)
+char	*ft_strnext(char const *s, char c)
 {
-	ft_putstr_fd(s, 1);
+	while (*s && *s != c)
+		s++;
+	return ((char*)(s));
 }
