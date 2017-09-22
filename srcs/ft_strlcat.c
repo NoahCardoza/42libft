@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
 	size_t src_len;
 	size_t dest_len;

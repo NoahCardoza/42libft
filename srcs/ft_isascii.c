@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:55:32 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 15:56:54 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/21 12:33:50 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

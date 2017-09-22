@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:12:05 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 15:37:53 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/21 12:32:55 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	int out;
 	int neg;

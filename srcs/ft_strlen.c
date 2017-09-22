@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+int		ft_strlen(const char *s)
 {
 	const char *addr;
 

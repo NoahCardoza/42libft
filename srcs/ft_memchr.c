@@ -13,7 +13,7 @@
 #include <strings.h>
 #include <stdio.h>
 
-void*	ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char ch;
 	unsigned char *vd;
@@ -23,5 +23,5 @@ void*	ft_memchr(const void *s, int c, size_t n)
 	while (n--)
 		if (*vd++ == ch)
 			return ((void*)(vd - 1));
-	return ((void*)(0));	
+	return ((void*)(0));
 }

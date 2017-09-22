@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 16:21:08 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 16:50:29 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/21 12:33:06 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <strings.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char *vd;
 

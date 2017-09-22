@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:41:07 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 15:42:56 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/21 12:33:24 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int		ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

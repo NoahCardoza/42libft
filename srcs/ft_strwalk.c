@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-** Transverses a char array while the current char equals 
+** Transverses a char array while the current char equals
 ** c. It returns 0 or 1 if it makes it to the end of the
 ** array.
 */

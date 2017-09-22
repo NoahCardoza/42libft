@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:21:07 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/21 12:07:40 by noahcardoza      ###   ########.fr       */
+/*   Created: 2017/09/21 12:31:42 by noahcardoza       #+#    #+#             */
+/*   Updated: 2017/09/21 21:34:24 by noahcardoza      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,17 @@ void	ft_putendl(char const *s);
 void	ft_bzero(void *s, size_t n);
 void*	ft_memset(void *b, int c, size_t len);
 void*	ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-void*	ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void*	ft_memccpy(void *restrict dst, const void *restrict src,
+		int c, size_t n);
 void*	ft_memmove(void *dst, const void *src, size_t len);
 void*	ft_memchr(const void *s, int c, size_t n);
 void*	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char	*ft_strdup(const char *s1);
-char	*ft_strcpy(char *dst, const char * src);
+char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
-size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
@@ -78,4 +79,4 @@ int		ft_isupper(int c);
 char	*ft_strnext(char const *s, char c);
 int		ft_strwalk(char const **s, char c);
 
-# endif
+#endif
