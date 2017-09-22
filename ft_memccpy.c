@@ -6,13 +6,13 @@
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 17:07:15 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/22 12:22:00 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/22 14:11:44 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include <string.h>
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
+void	*ft_memccpy(void *dst, const void *src, int c,
 	size_t n)
 {
 	unsigned char ch;

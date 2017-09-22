@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstnext.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 19:02:40 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/22 12:46:14 by nocardoz         ###   ########.fr       */
+/*   Created: 2017/09/22 15:38:23 by nocardoz          #+#    #+#             */
+/*   Updated: 2017/09/22 15:40:42 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+/*
+** Moves the list up once and returns the previous position.
+*/
+
+t_list	*ft_lstnext(t_list **lst)
 {
-	unsigned char *vd_1;
-	unsigned char *vd_2;
-
-	vd_1 = (unsigned char*)s1;
-	vd_2 = (unsigned char*)s2;
-	while (n--)
-		if ((*vd_1++ - *vd_2++))
-			return (*--vd_1 - *--vd_2);
-	return (0);
+	t_list *prev;
+	if (*lst)
+	{
+		prev = (*lst);
+		(*lst) = (*lst)->next;
+		return (prev);
+	}
+	return ((void*)(0));
 }

@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 19:02:40 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/22 12:46:14 by nocardoz         ###   ########.fr       */
+/*   Created: 2017/09/22 15:21:12 by nocardoz          #+#    #+#             */
+/*   Updated: 2017/09/22 15:39:44 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	unsigned char *vd_1;
-	unsigned char *vd_2;
+	t_list *node;
+	t_list *tmp;
 
-	vd_1 = (unsigned char*)s1;
-	vd_2 = (unsigned char*)s2;
-	while (n--)
-		if ((*vd_1++ - *vd_2++))
-			return (*--vd_1 - *--vd_2);
-	return (0);
+	node = NULL;
+	if (lst)
+		node = (*f)(ft_lstnext(&lst));
+	tmp = node;
+	while (lst)
+	{
+		tmp->next = (*f)(ft_lstnext(&lst));
+		tmp = tmp->next;
+	}
+	return (node);
 }

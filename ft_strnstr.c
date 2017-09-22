@@ -6,11 +6,11 @@
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 18:40:58 by noahcardoza       #+#    #+#             */
-/*   Updated: 2017/09/22 12:40:47 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/22 13:18:16 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include <string.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
