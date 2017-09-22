@@ -6,7 +6,7 @@
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/22 15:21:12 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/22 15:39:44 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/22 16:04:10 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *node;
-	t_list *tmp;
+	t_list	*node;
+	t_list	*tmp;
 
 	node = NULL;
 	if (lst)
