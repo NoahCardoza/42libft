@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
+/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 20:28:04 by noahcardoza       #+#    #+#             */
-/*   Updated: 2017/09/20 21:43:23 by noahcardoza      ###   ########.fr       */
+/*   Updated: 2017/09/22 12:45:32 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *str;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
 	if (!s || !*s)

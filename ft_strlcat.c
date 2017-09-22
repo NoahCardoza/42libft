@@ -6,7 +6,7 @@
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 20:51:21 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 22:20:06 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/22 12:22:06 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 				ft_memcpy(dst + dest_len, src, size - 1);
 			return (src_len > size ? src_len : src_len + size);
 		}
-		ft_memcpy(dst + dest_len, src, src_len + (dest_len + src_len == size ? -1 : 1));
+		ft_memcpy(dst + dest_len,
+			src, src_len + (dest_len + src_len == size ? -1 : 1));
 	}
 	return (dest_len + src_len);
 }

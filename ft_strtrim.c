@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
+/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 14:25:40 by noahcardoza       #+#    #+#             */
-/*   Updated: 2017/09/20 21:47:21 by noahcardoza      ###   ########.fr       */
+/*   Updated: 2017/09/22 12:47:36 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char const *ptr;
-	char *ret;
+	char const	*ptr;
+	char		*ret;
 
 	if (!(ptr = s))
 		return ((char*)(0));

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noahcardoza <noahcardoza@student.42.fr>    +#+  +:+       +#+        */
+/*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 18:40:58 by noahcardoza       #+#    #+#             */
-/*   Updated: 2017/09/19 18:50:13 by noahcardoza      ###   ########.fr       */
+/*   Updated: 2017/09/22 12:40:47 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const char *match;
-	const char *substr;
-	size_t tmp_len;
+	const char	*match;
+	const char	*substr;
+	size_t		tmp_len;
 
 	match = haystack;
 	if (!*needle)
 		return ((char*)(haystack));
-	while (*haystack && len--)
+	while (*haystack && ((tmp_len = --len) + 1))
 	{
 		if (*haystack == *needle)
 		{
-			tmp_len = len;
 			match = haystack;
 			substr = needle;
 			while (len-- + 1)

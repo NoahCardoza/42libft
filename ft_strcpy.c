@@ -6,11 +6,11 @@
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 19:08:44 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/18 19:17:09 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/22 12:23:16 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char* src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char *cpy;
 
