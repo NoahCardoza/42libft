@@ -6,7 +6,7 @@
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 12:31:42 by noahcardoza       #+#    #+#             */
-/*   Updated: 2017/09/22 16:03:48 by nocardoz         ###   ########.fr       */
+/*   Updated: 2017/09/22 19:19:33 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+// typedef struct		s_list2
+// {
+// 	void			*content;
+// 	size_t			content_size;
+// 	struct s_list	*next;
+// }					t_list2;
+
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
@@ -29,6 +36,8 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 t_list				*ft_lstnext(t_list **lst);
+t_list				*ft_lstindex(t_list *lst, int i);
+
 
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);

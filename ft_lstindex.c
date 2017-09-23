@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstindex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nocardoz <nocardoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/22 00:57:13 by nocardoz          #+#    #+#             */
-/*   Updated: 2017/09/22 19:23:21 by nocardoz         ###   ########.fr       */
+/*   Created: 2017/09/22 19:19:08 by nocardoz          #+#    #+#             */
+/*   Updated: 2017/09/22 19:22:53 by nocardoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+/*
+** Gets a link by it's index.
+** Returns null and prints error if index doesn't exist.
+*/
+
+t_list	*ft_lstindex(t_list *lst, int i)
 {
-	t_list *node;
-
-	if ((node = (t_list*)malloc(sizeof(t_list))))
+	while (lst && i-- > 0)
+		lst = lst->next;
+	if (i > 0)
 	{
-		node->content = NULL;
-		if (content && content_size)
-		{
-			node->content = ft_memalloc(content_size);
-			ft_memcpy(node->content, content, content_size);
-		}
-		node->content_size = (NULL == content ? 0 : content_size);
-		node->next = NULL;
+		ft_putstr_fd("[ERROR] Index out of range.\n", 2);
+		return (NULL);
 	}
-	return (node);
+	return (lst);
+
 }
